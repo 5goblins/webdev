@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'css/style.css')}}">
+    
+    <title>Inicio</title>
+</head>
+<body>
+    <div class = "container">
+    <h1>La vega 2</h1>
+    <img class =img src="{{ url_for('static', filename = 'media/choclogato.gif') }}" alt="Gato choclo">
+    <br>
+    <br>
+    <a href="agregar-donacion.html" class = "link" >Agregar Donación</a>
+    <br>
+    <a href="agregar-pedido.html" class = "link" >Agregar Pedido</a>
+    <br>
+    <a href="ver-donaciones.html" class = "link" >Ver Donaciones</a>
+    <br>
+    <a href="ver-pedidos.html" class = "link" >Ver Pedidos</a>
+    </div>
+</body>
+</html>

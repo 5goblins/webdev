@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Donacion</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+    <body>
+        <div class="container">
+            <form id="donationform" class="form" action = "example.com">
+
+                <label for="region">Region</label>
+                <select id="region" name="region">
+                </select>
+                <br>
+                <label for="comuna">Comuna</label>
+                <select id="comuna" name="comuna">
+
+                </select>
+                <label for="tipo">Tipo de Pedido</label>
+                <select id="tipo" name="tipo">
+                    <option value="Frutas">Frutas</option>
+                    <option value="Verduras">Verduras</option>
+                    <option value="Otros">Otros</option>
+                </select>
+
+                <br>
+                <label for="descripcion">Descripcion</label>
+                <input id="descripcion" name="descripcion" type="text" size="80" required>
+                <br>
+                <label for="cantidad">Cantidad</label>
+                <input id="cantidad" name="cantidad" type="text" size="10" required>
+                <br>
+                <label for="nombre">Nombre Solicitante</label>
+                <input id="nombre" name="nombre" type="text" size="30" required>
+                <br>
+                <label for="email">Email de Solicitante</label>
+                <input id="email" name="email" type="email" size="30" required>
+                <br>
+                <label for="celular">Celular de Contacto (+56XXXXXXXXX) </label>
+                <input id="celular" name="celular" type="text" size="15">
+                <br>
+            </form>
+        </div>
+
+            <!-- Trigger/Open The Modal -->
+            <div class="botones">
+                <button type="button" id="envio" onclick="validarForm()">
+                Agregar Pedido
+                </button>
+
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p>¿Confirma que desea agregar este pedido?</p>
+                <button type="button" id="confirm" onclick="confirm()">
+                Si, Confirmo.
+                </button>
+
+                <button type="button" id="cancel" onclick="cancel()">
+                    No, quiero volver al formulario.
+                </button>
+            </div>
+        </div>
+        </div>
+        <script lang="en" src="validadorpedido.js"></script>
+    </body>
+</html>

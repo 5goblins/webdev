@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Donacion</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+    <body>
+        <div class="container">
+            <form id="donationform" class="form" action = "example.com">
+
+                <label for="region">Region</label>
+                <select id="region" name="region">
+                    
+                </select>
+                <br>
+                <label for="comuna">Comuna</label>
+                <select id="comuna" name="comuna">
+
+                </select>
+                <br>
+                <label for="calle-numero">Calle y Numero</label>
+                <input id="calle-numero" name="calle-numero" type="text" size="80" required>
+                <br>
+                <label for="tipo">Tipo de Donacion</label>
+                <select id="tipo" name="tipo">
+                    <option value="Frutas">Frutas</option>
+                    <option value="Verduras">Verduras</option>
+                    <option value="Otros">Otros</option>
+                </select>
+                <br>
+                <label for="cantidad">Cantidad</label>
+                <input id="cantidad" name="cantidad" type="text" size="10" required>
+                <br>
+                <label for="fecha-disponibilidad">Fecha de Disponibilidad (yyyy-mm-dd)</label>
+                <input id="fecha-disponibilidad" name="fecha-disponibilidad" type="text" size="10" required>
+                <br>
+                <label for="descripcion">Descripcion</label>
+                <input id="descripcion" name="descripcion" type="text" size="80">
+                <br>
+                <label for="condiciones">Condiciones Para Retirar</label>
+                <input id="condiciones" name="condiciones" type="text" size="80">
+                <br>
+                <label for="foto-1">Foto de la Donacion:</label>
+                <input type="file" id="foto-1" name="foto-1" accept="image/png, image/jpeg" required>
+                <br>
+                <label for="foto-2">Foto 2:</label>
+                <input type="file" id="foto-2" name="foto-2" accept="image/png, image/jpeg">
+                <br>
+                <label for="foto-3">Foto 3:</label>
+                <input type="file" id="foto-3" name="foto-3" accept="image/png, image/jpeg">
+                <br>
+                <label for="nombre">Nombre Donante</label>
+                <input id="nombre" name="nombre" type="text" size="30" required>
+                <br>
+                <label for="email">Email de Contacto</label>
+                <input id="email" name="email" type="email" size="30" required>
+                <br>
+                <label for="celular">Celular de Contacto (+56XXXXXXXXX) </label>
+                <input id="celular" name="celular" type="text" size="15">
+                <br>
+            </form>
+        </div>
+
+            <!-- Trigger/Open The Modal -->
+            <div class="botones">
+                <button type="button" id="envio" onclick="validarForm()">
+                Agregar Donacion
+                </button>
+
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p>¿Confirma que desea agregar esta donación?</p>
+                <button type="button" id="confirm" onclick="confirm()">
+                Si, Confirmo.
+                </button>
+
+                <button type="button" id="cancel" onclick="cancel()">
+                    No, quiero volver al formulario.
+                </button>
+            </div>
+
+        </div>
+        </div>
+        <script lang="en" src="validador.js"></script>
+    </body>
+</html>
